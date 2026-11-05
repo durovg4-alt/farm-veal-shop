@@ -6,40 +6,43 @@
 <title>Фермерская телятина</title>
 <meta name="description" content="Фермерская телятина из Калужской области с доставкой по Москве. Заказ в Telegram, WhatsApp и MAX.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;0,800;1,500;1,700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shop.css">
-<link rel="stylesheet" href="p.css">
+<link rel="stylesheet" href="m.css">
 </head>
 <body>
 <header class="head"><div class="wrap head__in">
-  <a href="#top" class="logo">Фермерское мясо</a>
-  <nav class="nav"><a href="#catalog">Каталог</a><a href="#about">О продукции</a><a href="#delivery">Доставка</a><a href="#contacts">Контакты</a></nav>
-  <button class="head__cta" data-open-cart>Заказать <span data-count>0</span></button>
+  <a href="#top" class="logo">
+    <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path d="M16 29V13M16 21C9 21 5 16 5 8c8 0 11 4 11 13zM16 17c0-7 4-11 11-11 0 7-4 11-11 11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Фермерское мясо
+  </a>
+  <nav class="nav"><a href="#catalog">Каталог</a><a href="#cook">Что приготовить</a><a href="#about">О продукции</a><a href="#delivery">Доставка</a><a href="#contacts">Контакты</a></nav>
+  <button class="btn head__cta" data-open-cart>Заказать <span data-count>0</span></button>
   <button class="burger" data-burger aria-label="Меню"><i></i><i></i></button>
 </div></header>
 
 <main id="top">
 <section class="hero">
-  <div class="hero__bg"><img data-par=".12" src="img/yazyk.jpg" alt=""></div>
+  <div class="sun" aria-hidden="true"></div>
   <div class="wrap hero__in">
-    <p class="kicker" data-reveal>Калужская область → Москва · Одна ферма</p>
-    <h1><span class="l"><i>Телятина</i></span><span class="l red"><i>с фермы</i></span></h1>
-    <div class="hero__row">
-      <p class="lead" data-reveal style="--d:500ms">Яблочко, лопатка, шея и говяжий язык. Закупка под заказ, доставка по Москве.</p>
-      <div class="hero__btns" data-reveal style="--d:650ms">
-        <a class="btn" href="#catalog">Смотреть каталог ↓</a>
+    <div class="hero__text">
+      <p class="kicker">Калужская область → Москва</p>
+      <h1>Телятина<br><em>с фермы</em></h1>
+      <p class="lead">Мясо из одного хозяйства: яблочко, лопатка, шея и говяжий язык. Закупаем под заказ и привозим по Москве.</p>
+      <div class="hero__btns">
+        <a class="btn" href="#catalog">Смотреть каталог</a>
         <button class="btn btn--ghost" data-open-cart>Оформить заказ</button>
       </div>
     </div>
+    <div class="hero__art">
+      <div class="arch"><img src="img/lopatka.jpg" alt="Телятина, лопатка без кости"></div>
+      <div class="badge"><b>1</b>ферма<br>в Калужской области</div>
+    </div>
   </div>
-  <div class="mq" aria-hidden="true"><div>
-    <span>Одна ферма</span><span>✕</span><span>Закупка под заказ</span><span>✕</span><span>Доставка по Москве</span><span>✕</span>
-    <span>Одна ферма</span><span>✕</span><span>Закупка под заказ</span><span>✕</span><span>Доставка по Москве</span><span>✕</span>
-  </div></div>
+  <div class="grass" aria-hidden="true"></div>
 </section>
-
-<section class="intro"><div class="wrap">
-  <p class="scrub">Мясо из одного хозяйства в Калужской области. Берём под заказ, поэтому каждый кусок свежий, и привозим по Москве.</p>
+<section class="strip"><div class="wrap">
+  <span>Одна ферма в Калужской области</span><span>Закупка под заказ</span><span>Доставка по Москве</span>
 </div></section>
 
 <section class="sec" id="catalog"><div class="wrap">
@@ -47,16 +50,19 @@
   <div class="grid" id="grid"></div>
 </div></section>
 
-<section class="sec about" id="about"><div class="wrap about__in">
+<section class="sec cook" id="cook"><div class="wrap">
+  <div class="sec__head" data-reveal><h2>Что приготовить</h2><p class="sec__note">Варианты для каждого отруба</p></div>
+  <div class="cook__grid" id="cookgrid"></div>
+</div></section>
+
+<section class="sec" id="about"><div class="wrap about">
   <figure class="about__img" data-reveal><img src="img/hero.jpg" alt="Яблочко, лопатка, шея и говяжий язык"></figure>
-  <div class="about__txt" data-reveal style="--d:150ms">
+  <div data-reveal>
     <h2>О продукции</h2>
     <p>Фермерская телятина из Калужской области. Мясо поступает из одного хозяйства, для домашней кухни и любимых блюд.</p>
-    <p>Заказ комплектуем под вас: ничего не лежит на складе.</p>
+    <p>Заказ комплектуем под вас, поэтому ничего не лежит на складе.</p>
     <ul class="facts">
-      <li><b data-count-to="1">0</b>ферма</li>
-      <li><b data-count-to="4">0</b>отруба</li>
-      <li><b>от <i data-count-to="790">0</i></b>рублей за кг</li>
+      <li><b>1</b>ферма</li><li><b>4</b>отруба</li><li><b>от 790</b>рублей за кг</li>
     </ul>
   </div>
 </div></section>
@@ -64,14 +70,14 @@
 <section class="sec" id="how"><div class="wrap">
   <h2 data-reveal>Как заказать</h2>
   <ol class="steps">
-    <li data-reveal><b>01</b><h3>Выберите мясо</h3><p>Отруб и вес в каталоге, шаг 0,5 кг.</p></li>
-    <li data-reveal style="--d:120ms"><b>02</b><h3>Отправьте заявку</h3><p>Корзина соберёт сообщение для Telegram, WhatsApp или MAX.</p></li>
-    <li data-reveal style="--d:240ms"><b>03</b><h3>Согласуем детали</h3><p>Наличие, вес, нарезку, сумму и доставку.</p></li>
+    <li data-reveal><b>1</b><h3>Выберите мясо</h3><p>Отруб и вес в каталоге, шаг 0,5 кг.</p></li>
+    <li data-reveal><b>2</b><h3>Отправьте заявку</h3><p>Корзина соберёт сообщение для Telegram, WhatsApp или MAX.</p></li>
+    <li data-reveal><b>3</b><h3>Согласуем детали</h3><p>Наличие, вес, нарезку, сумму и доставку.</p></li>
   </ol>
 </div></section>
 
 <section class="sec" id="delivery"><div class="wrap deliv" data-reveal>
-  <h2>Доставка<br>и оплата</h2>
+  <h2>Доставка и оплата</h2>
   <div>
     <p>Доставляем по Москве. Районы, время и стоимость менеджер согласует при подтверждении заказа.</p>
     <p class="deliv__note">Мясо весовое: итоговая сумма считается по фактическому весу и согласуется с вами до доставки.</p>
@@ -79,9 +85,9 @@
 </div></section>
 
 <section class="cta" id="contacts">
-  <div class="cta__bg"><img data-par=".08" src="img/lopatka.jpg" alt=""></div>
+  <div class="grass grass--top" aria-hidden="true"></div>
   <div class="wrap cta__in" data-reveal>
-    <h2>Готовы сделать<br><em>заказ?</em></h2>
+    <h2>Готовы сделать заказ?</h2>
     <p>Выберите продукты и нужный вес, остальное подтвердим в чате.</p>
     <div class="cta__btns">
       <a class="send__b" data-link="tg" target="_blank" rel="noopener">Telegram</a>
@@ -94,16 +100,13 @@
 <footer class="foot"><div class="wrap"><span>Фермерское мясо</span><span>Телятина из Калужской области · Доставка по Москве</span></div></footer>
 <script src="shop.js"></script>
 <script>
-// слова текста вступления проявляются по мере прокрутки
-const sc = document.querySelector('.scrub');
-sc.innerHTML = sc.textContent.trim().split(/\s+/).map(w => `<span>${w}</span>`).join(' ');
-const ws = [...sc.children];
-function scrub() {
-  const r = sc.getBoundingClientRect();
-  const p = Math.min(1, Math.max(0, (innerHeight * .9 - r.top) / (r.height + innerHeight * .4)));
-  ws.forEach((w, i) => w.style.opacity = (.25 + .75 * Math.min(1, Math.max(0, p * ws.length * 1.2 - i))).toFixed(2));
-}
-addEventListener('scroll', scrub, { passive: true }); scrub();
+// раздел «Что приготовить» собирается из тех же данных, что и каталог
+document.getElementById('cookgrid').innerHTML = PRODUCTS.map(p => `
+  <article class="cook__col" data-reveal>
+    <header><img src="${p.img}" alt=""><div><h3>${p.name}</h3><span>${p.tag}</span></div></header>
+    <ul>${p.how.map(h => `<li><b>${h.t}</b><p>${h.d}</p></li>`).join('')}</ul>
+  </article>`).join('');
+document.querySelectorAll('#cookgrid [data-reveal]').forEach(el => observe(el));
 </script>
 </body>
 </html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Фермерская телятина</title>
+<meta name="description" content="Фермерская телятина из Калужской области с доставкой по Москве. Заказ в Telegram, WhatsApp и MAX.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shop.css">
+<link rel="stylesheet" href="p.css">
+</head>
+<body>
+<header class="head"><div class="wrap head__in">
+  <a href="#top" class="logo">Фермерское мясо</a>
+  <nav class="nav"><a href="#catalog">Каталог</a><a href="#about">О продукции</a><a href="#delivery">Доставка</a><a href="#contacts">Контакты</a></nav>
+  <button class="head__cta" data-open-cart>Заказать <span data-count>0</span></button>
+  <button class="burger" data-burger aria-label="Меню"><i></i><i></i></button>
+</div></header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero__bg"><img data-par=".12" src="img/yazyk.jpg" alt=""></div>
+  <div class="wrap hero__in">
+    <p class="kicker" data-reveal>Калужская область → Москва · Одна ферма</p>
+    <h1><span class="l"><i>Телятина</i></span><span class="l red"><i>с фермы</i></span></h1>
+    <div class="hero__row">
+      <p class="lead" data-reveal style="--d:500ms">Яблочко, лопатка, шея и говяжий язык. Закупка под заказ, доставка по Москве.</p>
+      <div class="hero__btns" data-reveal style="--d:650ms">
+        <a class="btn" href="#catalog">Смотреть каталог ↓</a>
+        <button class="btn btn--ghost" data-open-cart>Оформить заказ</button>
+      </div>
+    </div>
+  </div>
+  <div class="mq" aria-hidden="true"><div>
+    <span>Одна ферма</span><span>✕</span><span>Закупка под заказ</span><span>✕</span><span>Доставка по Москве</span><span>✕</span>
+    <span>Одна ферма</span><span>✕</span><span>Закупка под заказ</span><span>✕</span><span>Доставка по Москве</span><span>✕</span>
+  </div></div>
+</section>
+
+<section class="intro"><div class="wrap">
+  <p class="scrub">Мясо из одного хозяйства в Калужской области. Берём под заказ, поэтому каждый кусок свежий, и привозим по Москве.</p>
+</div></section>
+
+<section class="sec" id="catalog"><div class="wrap">
+  <div class="sec__head" data-reveal><h2>Каталог</h2><div class="chips" id="filters"></div></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section class="sec about" id="about"><div class="wrap about__in">
+  <figure class="about__img" data-reveal><img src="img/hero.jpg" alt="Яблочко, лопатка, шея и говяжий язык"></figure>
+  <div class="about__txt" data-reveal style="--d:150ms">
+    <h2>О продукции</h2>
+    <p>Фермерская телятина из Калужской области. Мясо поступает из одного хозяйства, для домашней кухни и любимых блюд.</p>
+    <p>Заказ комплектуем под вас: ничего не лежит на складе.</p>
+    <ul class="facts">
+      <li><b data-count-to="1">0</b>ферма</li>
+      <li><b data-count-to="4">0</b>отруба</li>
+      <li><b>от <i data-count-to="790">0</i></b>рублей за кг</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="sec" id="how"><div class="wrap">
+  <h2 data-reveal>Как заказать</h2>
+  <ol class="steps">
+    <li data-reveal><b>01</b><h3>Выберите мясо</h3><p>Отруб и вес в каталоге, шаг 0,5 кг.</p></li>
+    <li data-reveal style="--d:120ms"><b>02</b><h3>Отправьте заявку</h3><p>Корзина соберёт сообщение для Telegram, WhatsApp или MAX.</p></li>
+    <li data-reveal style="--d:240ms"><b>03</b><h3>Согласуем детали</h3><p>Наличие, вес, нарезку, сумму и доставку.</p></li>
+  </ol>
+</div></section>
+
+<section class="sec" id="delivery"><div class="wrap deliv" data-reveal>
+  <h2>Доставка<br>и оплата</h2>
+  <div>
+    <p>Доставляем по Москве. Районы, время и стоимость менеджер согласует при подтверждении заказа.</p>
+    <p class="deliv__note">Мясо весовое: итоговая сумма считается по фактическому весу и согласуется с вами до доставки.</p>
+  </div>
+</div></section>
+
+<section class="cta" id="contacts">
+  <div class="cta__bg"><img data-par=".08" src="img/lopatka.jpg" alt=""></div>
+  <div class="wrap cta__in" data-reveal>
+    <h2>Готовы сделать<br><em>заказ?</em></h2>
+    <p>Выберите продукты и нужный вес, остальное подтвердим в чате.</p>
+    <div class="cta__btns">
+      <a class="send__b" data-link="tg" target="_blank" rel="noopener">Telegram</a>
+      <a class="send__b" data-link="wa" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="send__b" data-link="max" target="_blank" rel="noopener">MAX</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot"><div class="wrap"><span>Фермерское мясо</span><span>Телятина из Калужской области · Доставка по Москве</span></div></footer>
+<script src="shop.js"></script>
+<script>
+// слова текста вступления проявляются по мере прокрутки
+const sc = document.querySelector('.scrub');
+sc.innerHTML = sc.textContent.trim().split(/\s+/).map(w => `<span>${w}</span>`).join(' ');
+const ws = [...sc.children];
+function scrub() {
+  const r = sc.getBoundingClientRect();
+  const p = Math.min(1, Math.max(0, (innerHeight * .9 - r.top) / (r.height + innerHeight * .4)));
+  ws.forEach((w, i) => w.style.opacity = (.25 + .75 * Math.min(1, Math.max(0, p * ws.length * 1.2 - i))).toFixed(2));
+}
+addEventListener('scroll', scrub, { passive: true }); scrub();
+</script>
+</body>
+</html>
