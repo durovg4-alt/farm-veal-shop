@@ -6,37 +6,46 @@
 <title>Фермерская телятина</title>
 <meta name="description" content="Фермерская телятина из Калужской области с доставкой по Москве. Заказ в Telegram, WhatsApp и MAX.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shop.css">
-<link rel="stylesheet" href="s.css">
+<link rel="stylesheet" href="f.css">
 </head>
 <body>
 <header class="head"><div class="wrap head__in">
   <a href="#top" class="logo"><i></i>Фермерское мясо</a>
-  <nav class="nav"><a href="#catalog">Каталог</a><a href="#cook">Что приготовить</a><a href="#about">О продукции</a><a href="#delivery">Доставка</a><a href="#contacts">Контакты</a></nav>
+  <nav class="nav"><a href="#catalog">Каталог</a><a href="#cook">Что приготовить</a><a href="#about">От луга до стола</a><a href="#delivery">Доставка</a><a href="#contacts">Контакты</a></nav>
   <button class="btn head__cta" data-open-cart>Заказать <span data-count>0</span></button>
   <button class="burger" data-burger aria-label="Меню"><i></i><i></i></button>
 </div></header>
 
 <main id="top">
-<section class="hero"><div class="wrap">
-  <div class="hero__grid">
+<section class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="cloud c1" aria-hidden="true"></div><div class="cloud c2" aria-hidden="true"></div>
+  <div class="wrap hero__grid">
     <div class="hero__text">
       <p class="label"><i></i>Калужская область — Москва</p>
       <h1><span>Телятина</span><b>с фермы</b></h1>
-      <p class="lead">Мясо из одного хозяйства: яблочко, лопатка, шея и говяжий язык. Закупаем под заказ и привозим по Москве.</p>
+      <p class="lead">Мясо из одного хозяйства, где коровы пасутся на лугу. Яблочко, лопатка, шея и говяжий язык. Закупаем под заказ и привозим по Москве.</p>
       <div class="hero__btns">
         <a class="btn" href="#catalog">Смотреть каталог</a>
         <button class="btn btn--ghost" data-open-cart>Оформить заказ</button>
       </div>
     </div>
-    <figure class="hero__img"><img src="img/lopatka.jpg" alt="Телятина, лопатка без кости"></figure>
+    <figure class="hero__img"><img src="img/lopatka.jpg" alt="Телятина, лопатка без кости"><figcaption>Лопатка без кости</figcaption></figure>
   </div>
-  <ul class="hero__facts">
-    <li><b>Одна ферма</b>в Калужской области</li>
-    <li><b>Под заказ</b>берём ровно столько, сколько нужно</li>
-    <li><b>По Москве</b>доставка к двери</li>
-  </ul>
+  <div class="meadow" aria-hidden="true">
+    <svg class="hills" viewBox="0 0 1440 300" preserveAspectRatio="none">
+      <path d="M0 120 C220 40 420 60 640 110 S1100 150 1440 60 V300 H0Z" fill="#cfe5b6"/>
+      <path d="M0 170 C260 100 520 130 760 170 S1200 200 1440 140 V300 H0Z" fill="#a9d08a"/>
+      <path d="M0 230 C300 190 560 210 820 235 S1240 240 1440 210 V300 H0Z" fill="#6fae5f"/>
+    </svg>
+    <div class="herd" id="herd"></div>
+  </div>
+</section>
+<section class="ticker" aria-hidden="true"><div>
+  <span>Одна ферма в Калужской области</span><i>✿</i><span>Закупка под заказ</span><i>✿</i><span>Доставка по Москве</span><i>✿</i>
+  <span>Одна ферма в Калужской области</span><i>✿</i><span>Закупка под заказ</span><i>✿</i><span>Доставка по Москве</span><i>✿</i>
 </div></section>
 
 <section class="sec" id="catalog"><div class="wrap">
@@ -44,29 +53,36 @@
   <div class="grid" id="grid"></div>
 </div></section>
 
-<section class="sec" id="cook"><div class="wrap">
+<section class="sec cook" id="cook"><div class="wrap">
   <div class="sec__head" data-reveal><h2>Что приготовить</h2><p class="sec__note">Варианты для каждого отруба</p></div>
   <div class="cook__grid" id="cookgrid"></div>
 </div></section>
 
-<section class="sec" id="about"><div class="wrap about">
-  <figure class="about__img" data-reveal><img src="img/hero.jpg" alt="Яблочко, лопатка, шея и говяжий язык"></figure>
-  <div class="about__txt" data-reveal>
-    <h2>О продукции</h2>
-    <p>Фермерская телятина из Калужской области. Мясо поступает из одного хозяйства, для домашней кухни и любимых блюд.</p>
-    <p>Заказ комплектуем под вас, поэтому ничего не лежит на складе.</p>
-    <ul class="facts">
-      <li><b>1</b>ферма</li><li><b>4</b>отруба</li><li><b>от 790</b>рублей за кг</li>
-    </ul>
+<section class="sec" id="about"><div class="wrap">
+  <div class="sec__head" data-reveal><h2>От луга до стола</h2><p class="sec__note">Мясо поступает из одного хозяйства в Калужской области</p></div>
+  <div class="path">
+    <article class="path__card p1" data-reveal>
+      <div class="path__art" id="art1"></div>
+      <h3>Луг</h3><p>Одна ферма в Калужской области. Коровы пасутся на свежем воздухе, мясо идёт из одного хозяйства.</p>
+    </article>
+    <article class="path__card p2" data-reveal style="--d:120ms">
+      <div class="path__art" id="art2"></div>
+      <h3>Дорога</h3><p>Закупаем под заказ, комплектуем и привозим по Москве. Ничего не лежит на складе.</p>
+    </article>
+    <article class="path__card p3" data-reveal style="--d:240ms">
+      <div class="path__art" id="art3"></div>
+      <h3>Семейный стол</h3><p>Для домашней кухни и любимых блюд: гуляш, жаркое, запечённое мясо и праздничные закуски.</p>
+    </article>
   </div>
+  <figure class="about__photo" data-reveal><img src="img/hero.jpg" alt="Яблочко, лопатка, шея и говяжий язык"></figure>
 </div></section>
 
 <section class="sec" id="how"><div class="wrap">
   <h2 data-reveal>Как заказать</h2>
   <ol class="steps">
-    <li data-reveal><b>01</b><h3>Выберите мясо</h3><p>Отруб и вес в каталоге, шаг 0,5 кг.</p></li>
-    <li data-reveal><b>02</b><h3>Отправьте заявку</h3><p>Корзина соберёт сообщение для Telegram, WhatsApp или MAX.</p></li>
-    <li data-reveal><b>03</b><h3>Согласуем детали</h3><p>Наличие, вес, нарезку, сумму и доставку.</p></li>
+    <li data-reveal><b>1</b><h3>Выберите мясо</h3><p>Отруб и вес в каталоге, шаг 0,5 кг.</p></li>
+    <li data-reveal style="--d:120ms"><b>2</b><h3>Отправьте заявку</h3><p>Корзина соберёт сообщение для Telegram, WhatsApp или MAX.</p></li>
+    <li data-reveal style="--d:240ms"><b>3</b><h3>Согласуем детали</h3><p>Наличие, вес, нарезку, сумму и доставку.</p></li>
   </ol>
 </div></section>
 
@@ -78,22 +94,71 @@
   </div>
 </div></section>
 
-<section class="cta" id="contacts"><div class="wrap" data-reveal>
-  <h2>Готовы сделать заказ?</h2>
-  <p>Выберите продукты и нужный вес, остальное подтвердим в чате.</p>
-  <div class="cta__btns">
-    <a class="send__b" data-link="tg" target="_blank" rel="noopener">Telegram</a>
-    <a class="send__b" data-link="wa" target="_blank" rel="noopener">WhatsApp</a>
-    <a class="send__b" data-link="max" target="_blank" rel="noopener">MAX</a>
+<section class="cta" id="contacts">
+  <div class="cta__hills" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0 60 C240 0 520 20 760 60 S1200 100 1440 30 V0 H0Z" fill="#fbf7ee"/></svg></div>
+  <div class="wrap" data-reveal>
+    <h2>Готовы сделать заказ?</h2>
+    <p>Выберите продукты и нужный вес, остальное подтвердим в чате.</p>
+    <div class="cta__btns">
+      <a class="send__b" data-link="tg" target="_blank" rel="noopener">Telegram</a>
+      <a class="send__b" data-link="wa" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="send__b" data-link="max" target="_blank" rel="noopener">MAX</a>
+    </div>
   </div>
-</div></section>
+</section>
 </main>
 <footer class="foot"><div class="wrap"><span>Фермерское мясо</span><span>Телятина из Калужской области · Доставка по Москве</span></div></footer>
 <script src="shop.js"></script>
 <script>
+/* ---------- иллюстрации ---------- */
+const cow = (cls = '', delay = 0) => `<svg class="cow ${cls}" viewBox="0 0 130 90" style="--gd:${delay}s" aria-hidden="true">
+  <g class="cow__tail"><path d="M24 30C10 30 8 46 12 58" stroke="#fffaf0" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="12" cy="60" r="4.5" fill="#5a4332"/></g>
+  <rect x="42" y="50" width="9" height="26" rx="3" fill="#ddd3c1"/><rect x="88" y="50" width="9" height="26" rx="3" fill="#ddd3c1"/>
+  <rect x="42" y="71" width="9" height="6" rx="2" fill="#5a4332"/><rect x="88" y="71" width="9" height="6" rx="2" fill="#5a4332"/>
+  <rect x="22" y="22" width="80" height="38" rx="18" fill="#fffaf0"/>
+  <path d="M38 24q16-5 20 8-4 13-20 8z" fill="#6b4f3a"/><ellipse cx="82" cy="47" rx="11" ry="7" fill="#6b4f3a"/>
+  <rect x="30" y="50" width="9" height="26" rx="3" fill="#fffaf0"/><rect x="76" y="50" width="9" height="26" rx="3" fill="#fffaf0"/>
+  <rect x="30" y="71" width="9" height="6" rx="2" fill="#5a4332"/><rect x="76" y="71" width="9" height="6" rx="2" fill="#5a4332"/>
+  <g class="cow__head"><path d="M99 22q-2-8 3-10" stroke="#eadcbd" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <rect x="92" y="22" width="28" height="26" rx="11" fill="#fffaf0"/><rect x="104" y="34" width="19" height="15" rx="7" fill="#f4b9ad"/>
+    <circle cx="111" cy="41" r="1.7" fill="#8a5148"/><circle cx="118" cy="41" r="1.7" fill="#8a5148"/><circle cx="102" cy="31" r="2.3" fill="#2a2320"/>
+    <ellipse cx="94" cy="27" rx="7" ry="3.6" fill="#6b4f3a" transform="rotate(-28 94 27)"/></g>
+</svg>`;
+document.getElementById('herd').innerHTML =
+  cow('h1', 0) + cow('h2', 2.2) + cow('h3', 4) + cow('h4 walk', 1);
+
+document.getElementById('art1').innerHTML = `<svg viewBox="0 0 320 200" aria-hidden="true">
+  <circle cx="250" cy="48" r="26" fill="#fff0a8" class="pulse"/>
+  <path d="M0 130C70 90 150 100 220 120S300 130 320 110V200H0Z" fill="#a9d08a"/>
+  <path d="M0 165C90 140 200 150 320 150V200H0Z" fill="#6fae5f"/>
+  <g fill="#fff"><circle cx="40" cy="168" r="3"/><circle cx="90" cy="180" r="3"/><circle cx="270" cy="172" r="3"/></g>
+  <g fill="#f59db5"><circle cx="60" cy="176" r="3"/><circle cx="240" cy="182" r="3"/></g>
+</svg>${cow('art-cow')}`;
+document.getElementById('art2').innerHTML = `<svg viewBox="0 0 320 200" aria-hidden="true">
+  <path d="M0 150C100 120 220 130 320 120V200H0Z" fill="#cfe5b6"/><rect y="168" width="320" height="32" fill="#8d9a8f"/>
+  <path d="M0 184H320" stroke="#fff" stroke-width="3" stroke-dasharray="18 14"/>
+  <g class="van"><rect x="70" y="104" width="120" height="58" rx="8" fill="#fffaf0"/><path d="M190 120h34l22 22v20h-56z" fill="#f6dccf"/>
+  <rect x="204" y="126" width="24" height="16" rx="3" fill="#cfe7f0"/><circle cx="106" cy="166" r="14" fill="#2c3a30"/><circle cx="106" cy="166" r="5" fill="#cfd8cc"/>
+  <circle cx="218" cy="166" r="14" fill="#2c3a30"/><circle cx="218" cy="166" r="5" fill="#cfd8cc"/>
+  <path d="M112 142c0-16 10-22 24-22 0 14-8 22-24 22zM128 144c-2-12 4-20 16-22 2 12-4 20-16 22z" fill="#6fae5f"/></g>
+  <g fill="#fff" class="cloudy"><ellipse cx="60" cy="40" rx="30" ry="12"/><ellipse cx="82" cy="34" rx="20" ry="11"/></g>
+</svg>`;
+document.getElementById('art3').innerHTML = `<svg viewBox="0 0 320 200" aria-hidden="true">
+  <rect width="320" height="200" fill="#fbe9c6"/><rect y="150" width="320" height="50" fill="#f1d39b"/>
+  <g><circle cx="110" cy="78" r="17" fill="#f2c9a5"/><path d="M92 74c2-16 32-16 36 0-10-6-26-6-36 0z" fill="#5b3a29"/><path d="M82 128c0-26 14-34 28-34s28 8 28 34z" fill="#4f7d5b"/></g>
+  <g><circle cx="168" cy="74" r="17" fill="#f2c9a5"/><path d="M150 76c-4-22 38-26 36 0 2 14 2 22 6 30-8 4-12-4-12-14-6-6-20-6-26-2-2 8-4 14-6 16-6-6-4-18-2-30z" fill="#8a4b2d"/><path d="M142 128c0-26 12-36 26-36s28 10 28 36z" fill="#e2674b"/></g>
+  <g><circle cx="226" cy="92" r="13" fill="#f2c9a5"/><path d="M212 90c2-14 24-14 28 0-8-5-20-5-28 0z" fill="#c78a3a"/><path d="M204 134c0-20 10-28 22-28s22 8 22 28z" fill="#f2c14e"/></g>
+  <rect x="40" y="128" width="240" height="14" rx="6" fill="#b98558"/><rect x="60" y="140" width="10" height="46" fill="#9a6d43"/><rect x="250" y="140" width="10" height="46" fill="#9a6d43"/>
+  <g><ellipse cx="108" cy="124" rx="22" ry="6" fill="#fff"/><path d="M96 122c4-8 18-8 24 0z" fill="#b5413a"/>
+     <ellipse cx="168" cy="124" rx="22" ry="6" fill="#fff"/><path d="M156 122c4-8 18-8 24 0z" fill="#b5413a"/>
+     <ellipse cx="228" cy="126" rx="18" ry="5" fill="#fff"/><path d="M219 124c3-6 14-6 18 0z" fill="#b5413a"/></g>
+  <g class="steam" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"><path d="M104 108c-4-6 4-8 0-14"/><path d="M164 108c-4-6 4-8 0-14"/><path d="M224 110c-4-6 4-8 0-14"/></g>
+</svg>`;
+
+/* «Что приготовить» из тех же данных, что и каталог */
 document.getElementById('cookgrid').innerHTML = PRODUCTS.map(p => `
   <article class="cook__col" data-reveal>
-    <header><h3>${p.name}</h3><span>${p.tag}</span></header>
+    <header><img src="${p.img}" alt=""><div><h3>${p.name}</h3><span>${p.tag}</span></div></header>
     <ul>${p.how.map(h => `<li><b>${h.t}</b><p>${h.d}</p></li>`).join('')}</ul>
   </article>`).join('');
 document.querySelectorAll('#cookgrid [data-reveal]').forEach(el => observe(el));

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Фермерская телятина</title>
+<meta name="description" content="Фермерская телятина из Калужской области с доставкой по Москве. Заказ в Telegram, WhatsApp и MAX.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shop.css">
+<link rel="stylesheet" href="s.css">
+</head>
+<body>
+<header class="head"><div class="wrap head__in">
+  <a href="#top" class="logo"><i></i>Фермерское мясо</a>
+  <nav class="nav"><a href="#catalog">Каталог</a><a href="#cook">Что приготовить</a><a href="#about">О продукции</a><a href="#delivery">Доставка</a><a href="#contacts">Контакты</a></nav>
+  <button class="btn head__cta" data-open-cart>Заказать <span data-count>0</span></button>
+  <button class="burger" data-burger aria-label="Меню"><i></i><i></i></button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div class="hero__grid">
+    <div class="hero__text">
+      <p class="label"><i></i>Калужская область — Москва</p>
+      <h1><span>Телятина</span><b>с фермы</b></h1>
+      <p class="lead">Мясо из одного хозяйства: яблочко, лопатка, шея и говяжий язык. Закупаем под заказ и привозим по Москве.</p>
+      <div class="hero__btns">
+        <a class="btn" href="#catalog">Смотреть каталог</a>
+        <button class="btn btn--ghost" data-open-cart>Оформить заказ</button>
+      </div>
+    </div>
+    <figure class="hero__img"><img src="img/lopatka.jpg" alt="Телятина, лопатка без кости"></figure>
+  </div>
+  <ul class="hero__facts">
+    <li><b>Одна ферма</b>в Калужской области</li>
+    <li><b>Под заказ</b>берём ровно столько, сколько нужно</li>
+    <li><b>По Москве</b>доставка к двери</li>
+  </ul>
+</div></section>
+
+<section class="sec" id="catalog"><div class="wrap">
+  <div class="sec__head" data-reveal><h2>Каталог</h2><div class="chips" id="filters"></div></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section class="sec" id="cook"><div class="wrap">
+  <div class="sec__head" data-reveal><h2>Что приготовить</h2><p class="sec__note">Варианты для каждого отруба</p></div>
+  <div class="cook__grid" id="cookgrid"></div>
+</div></section>
+
+<section class="sec" id="about"><div class="wrap about">
+  <figure class="about__img" data-reveal><img src="img/hero.jpg" alt="Яблочко, лопатка, шея и говяжий язык"></figure>
+  <div class="about__txt" data-reveal>
+    <h2>О продукции</h2>
+    <p>Фермерская телятина из Калужской области. Мясо поступает из одного хозяйства, для домашней кухни и любимых блюд.</p>
+    <p>Заказ комплектуем под вас, поэтому ничего не лежит на складе.</p>
+    <ul class="facts">
+      <li><b>1</b>ферма</li><li><b>4</b>отруба</li><li><b>от 790</b>рублей за кг</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="sec" id="how"><div class="wrap">
+  <h2 data-reveal>Как заказать</h2>
+  <ol class="steps">
+    <li data-reveal><b>01</b><h3>Выберите мясо</h3><p>Отруб и вес в каталоге, шаг 0,5 кг.</p></li>
+    <li data-reveal><b>02</b><h3>Отправьте заявку</h3><p>Корзина соберёт сообщение для Telegram, WhatsApp или MAX.</p></li>
+    <li data-reveal><b>03</b><h3>Согласуем детали</h3><p>Наличие, вес, нарезку, сумму и доставку.</p></li>
+  </ol>
+</div></section>
+
+<section class="sec" id="delivery"><div class="wrap deliv" data-reveal>
+  <h2>Доставка и оплата</h2>
+  <div>
+    <p>Доставляем по Москве. Районы, время и стоимость менеджер согласует при подтверждении заказа.</p>
+    <p class="deliv__note">Мясо весовое: итоговая сумма считается по фактическому весу и согласуется с вами до доставки.</p>
+  </div>
+</div></section>
+
+<section class="cta" id="contacts"><div class="wrap" data-reveal>
+  <h2>Готовы сделать заказ?</h2>
+  <p>Выберите продукты и нужный вес, остальное подтвердим в чате.</p>
+  <div class="cta__btns">
+    <a class="send__b" data-link="tg" target="_blank" rel="noopener">Telegram</a>
+    <a class="send__b" data-link="wa" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="send__b" data-link="max" target="_blank" rel="noopener">MAX</a>
+  </div>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap"><span>Фермерское мясо</span><span>Телятина из Калужской области · Доставка по Москве</span></div></footer>
+<script src="shop.js"></script>
+<script>
+document.getElementById('cookgrid').innerHTML = PRODUCTS.map(p => `
+  <article class="cook__col" data-reveal>
+    <header><h3>${p.name}</h3><span>${p.tag}</span></header>
+    <ul>${p.how.map(h => `<li><b>${h.t}</b><p>${h.d}</p></li>`).join('')}</ul>
+  </article>`).join('');
+document.querySelectorAll('#cookgrid [data-reveal]').forEach(el => observe(el));
+</script>
+</body>
+</html>
